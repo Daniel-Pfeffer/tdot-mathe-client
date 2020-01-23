@@ -103,16 +103,7 @@ export class DialogComponent {
 		const rminutes = Math.round(minutes);
 		return `
 		${rhours > 0 ? `
-			${rhours} Stunde
-			${rhours > 1 ? 'n' : ''}`
-			: ''}
-		${rminutes > 0 ?
-			`${rhours === 0 || rminutes === 0 ?
-				''
-				: ' und '}
-		${rminutes} Minute
-		${rminutes > 1 ? 'n'
-				: ''}` : ''}`;
+			${rhours} Stunde${rhours > 1 ? 'n' : ''}` : ''}${rminutes > 0 ? `${rhours === 0 || rminutes === 0 ? '' : ' und '}${rminutes} Minute${rminutes > 1 ? 'n' : ''}` : ''}`;
 	}
 
 	private gConvert(num: number) {
@@ -134,7 +125,7 @@ export class DialogComponent {
 						activity,
 						[
 							new CaloriesNode(
-								`Um insgesamt ${this.gConvert(g)}g an Süßigkeiten zu verbrennen, ${isCar ? 'könnte' : 'müsste'} man ${this.toSecondPrecision((cal / 100) * distance)}km ${isCar ? ' mit dem Auto fahren' : activity.toLowerCase()}`
+								`Um insgesamt ${this.gConvert(g)} an Süßigkeiten zu verbrennen, ${isCar ? 'könnte' : 'müsste'} man ${this.toSecondPrecision((cal / 100) * distance)}km ${isCar ? ' mit dem Auto fahren' : activity.toLowerCase()}`
 							)
 						]
 					)
