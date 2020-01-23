@@ -1,0 +1,43 @@
+{
+  "gain": [
+    {
+      "name": "gummi",
+      "count": 100,
+      "kcal": 343
+    },
+    {
+      "name": "zuckerl",
+      "count": 100,
+      "kcal": 380
+    },
+    {
+      "name": "mms",
+      "count": 100,
+      "kcal": 516
+    },
+    {
+      "name": "chips",
+      "count": 100,
+      "kcal": 530
+    }
+  ],
+  "burn": [
+    {
+      "activity": "Laufen",
+      "distance": 2.016
+    },
+    {
+      "activity": "Radfahren",
+      "distance": 8.6
+    },
+    {
+      "activity": "Stiegen steigen",
+      "time": 7.74193548387
+    },
+    {
+      "activity": "Auto",
+      "distance": 0.15981664555,
+      "isCar": true
+    }
+  ]
+}

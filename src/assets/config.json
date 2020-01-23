@@ -1,0 +1,29 @@
+{
+  "appName": "Guessing Game",
+  "types": [
+    {
+      "name": "Gummibären [g]",
+      "shortName": "gummi",
+      "type": "number",
+      "description": "Wie viele Gramm Gummibären befinden sich in der Kugel"
+    },
+    {
+      "name": "Zuckerl [g]",
+      "shortName": "zuckerl",
+      "type": "number",
+      "description": "Wie viele Gramm Zuckerl befinden sich im Gefäß"
+    },
+    {
+      "name": "M&Ms [g]",
+      "shortName": "mms",
+      "type": "number",
+      "description": "Wie viele Gramm M&Ms befinden sich im Gefäß"
+    },
+    {
+      "name": "Chips [g]",
+      "shortName": "chips",
+      "type": "number",
+      "description": "Wie viele Gramm Chips befinden sich im Gefäß"
+    }
+  ]
+}

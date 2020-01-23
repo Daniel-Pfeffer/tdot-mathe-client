@@ -1,0 +1,34 @@
+<mat-card class="formula">
+	<form autocomplete="off">
+		<h2 class="heading">Willkommen zum Tag der Offenen Tür der HTBLA Leonding</h2>
+		<form class="content" [formGroup]="form" (ngSubmit)="onSubmit()">
+			<mat-form-field color="primary">
+				<input matInput placeholder="Name" formControlName="name" name="Name" required>
+				<mat-error *ngIf="!form.name?.errors.required">
+					Name ist erforderlich
+				</mat-error>
+			</mat-form-field>
+			<div *ngFor="let type of data.config.types">
+				<br>
+				<mat-form-field color="primary">
+					<input matInput placeholder="{{type.name}}" formControlName="{{type.shortName}}"
+							 name="{{type.shortName}}" required>
+					<mat-icon matSuffix matTooltip="{{type.description}}" matTooltipPosition="left">help_outline</mat-icon>
+					<mat-error *ngIf="form.controls[type.shortName].errors?.required">
+						{{type.name}} ist erforderlich
+					</mat-error>
+					<mat-error *ngIf="form.controls[type.shortName].errors?.pattern">
+						{{type.name}} muss eine Ganzzahl sein
+					</mat-error>
+				</mat-form-field>
+			</div>
+			<div class="buttons">
+				<button mat-button color="primary" style="font-size: large" type="submit" [disabled]="!form.valid">
+					Absenden
+				</button>
+			</div>
+		</form>
+
+
+	</form>
+</mat-card>
